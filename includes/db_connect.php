@@ -4,7 +4,7 @@ $mongo = new MongoClient("mongodb://localhost");
 
 if ($mongo) {	// If happy...
    $db = $mongo -> Jetblue;
-   $users = $db-> flyingHotels;
+   $dataSet = $db-> flyingHotels;
 } else {
    echo json_encode(['status' => 'mongo connection error']);
    exit; 
