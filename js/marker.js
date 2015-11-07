@@ -1,5 +1,7 @@
 var map = null;
 
+
+
 function GetMap()
 {
    // Create a variable to hold the map itself.
