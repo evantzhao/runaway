@@ -11,7 +11,7 @@ function GetMap()
    console.log(center);
    var pushpinOptions = {width: null, height: null, htmlContent: "<div style='width:8px;height:8px;margin-left:-6px;margin-top:-5px;background-image:none !important;background-color:#29C0F2;border:1px solid #009DD1;border-radius:8px;-moz-border-radius:8px;-webkit-border-radius:8px;-o-border-radius:8px;-webkit-transition:all .1s ease;-moz-transition:all .1s ease;-o-transition:all .1s ease;transition:all .1s ease;-ms-transition:none'></div>"}; 
 
-   var infoboxOptions = {width :100, height :40, showCloseButton: false, showPointer: true}; 
+   var infoboxOptions = {width :100, height :40, showCloseButton: false, showPointer: true, title: "hello"}; 
 
    var Infobox = new Microsoft.Maps.Infobox(center, infoboxOptions);    
    var pushpin = new Microsoft.Maps.Pushpin(center, pushpinOptions); 
@@ -25,10 +25,10 @@ function createPins(locations, text) {
    var targetLocations = new Microsoft.Maps.EntityCollection();
 
    var pushpinOptions = {width: null, height: null, htmlContent: "<div style='width:8px;height:8px;margin-left:-6px;margin-top:-5px;background-image:none !important;background-color:#29C0F2;border:1px solid #009DD1;border-radius:8px;-moz-border-radius:8px;-webkit-border-radius:8px;-o-border-radius:8px;-webkit-transition:all .1s ease;-moz-transition:all .1s ease;-o-transition:all .1s ease;transition:all .1s ease;-ms-transition:none'></div>"}; 
-
-   var infoboxOptions = {width :100, height :40, showCloseButton: false, showPointer: true}; 
+   var infoboxOptions;
 
    for(var i = 0; i < locations.length; i++) {
+      infoboxOptions = {width :100, height :40, showCloseButton: false, showPointer: true, title: text}; 
       targetLocations.push(new Microsoft.Maps.Pushpin(targetLocations[i], pushpinOptions));
       targetLocations.push(new Microsoft.Maps.Infobox(targetLocations[i], infoboxOptions));
    }
