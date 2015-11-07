@@ -1,0 +1,724 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'foundation-cli',
+1 verbose cli   'bower',
+1 verbose cli   'gulp' ]
+2 info using npm@2.14.7
+3 info using node@v4.2.2
+4 verbose install initial load of /usr/local/lib/package.json
+5 verbose readDependencies loading dependencies from /usr/local/lib/package.json
+6 silly cache add args [ 'foundation-cli', null ]
+7 verbose cache add spec foundation-cli
+8 silly cache add args [ 'bower', null ]
+9 verbose cache add spec bower
+10 silly cache add args [ 'gulp', null ]
+11 verbose cache add spec gulp
+12 silly cache add parsed spec Result {
+12 silly cache add   raw: 'foundation-cli',
+12 silly cache add   scope: null,
+12 silly cache add   name: 'foundation-cli',
+12 silly cache add   rawSpec: '',
+12 silly cache add   spec: '*',
+12 silly cache add   type: 'range' }
+13 silly addNamed foundation-cli@*
+14 verbose addNamed "*" is a valid semver range for foundation-cli
+15 silly addNameRange { name: 'foundation-cli', range: '*', hasData: false }
+16 silly mapToRegistry name foundation-cli
+17 silly mapToRegistry using default registry
+18 silly mapToRegistry registry https://registry.npmjs.org/
+19 silly mapToRegistry uri https://registry.npmjs.org/foundation-cli
+20 verbose addNameRange registry:https://registry.npmjs.org/foundation-cli not in flight; fetching
+21 silly cache add parsed spec Result {
+21 silly cache add   raw: 'bower',
+21 silly cache add   scope: null,
+21 silly cache add   name: 'bower',
+21 silly cache add   rawSpec: '',
+21 silly cache add   spec: '*',
+21 silly cache add   type: 'range' }
+22 silly addNamed bower@*
+23 verbose addNamed "*" is a valid semver range for bower
+24 silly addNameRange { name: 'bower', range: '*', hasData: false }
+25 silly mapToRegistry name bower
+26 silly mapToRegistry using default registry
+27 silly mapToRegistry registry https://registry.npmjs.org/
+28 silly mapToRegistry uri https://registry.npmjs.org/bower
+29 verbose addNameRange registry:https://registry.npmjs.org/bower not in flight; fetching
+30 silly cache add parsed spec Result {
+30 silly cache add   raw: 'gulp',
+30 silly cache add   scope: null,
+30 silly cache add   name: 'gulp',
+30 silly cache add   rawSpec: '',
+30 silly cache add   spec: '*',
+30 silly cache add   type: 'range' }
+31 silly addNamed gulp@*
+32 verbose addNamed "*" is a valid semver range for gulp
+33 silly addNameRange { name: 'gulp', range: '*', hasData: false }
+34 silly mapToRegistry name gulp
+35 silly mapToRegistry using default registry
+36 silly mapToRegistry registry https://registry.npmjs.org/
+37 silly mapToRegistry uri https://registry.npmjs.org/gulp
+38 verbose addNameRange registry:https://registry.npmjs.org/gulp not in flight; fetching
+39 verbose request uri https://registry.npmjs.org/foundation-cli
+40 verbose request no auth needed
+41 info attempt registry request try #1 at 3:26:22 PM
+42 verbose request id c663245231b6f800
+43 http request GET https://registry.npmjs.org/foundation-cli
+44 verbose request uri https://registry.npmjs.org/bower
+45 verbose request no auth needed
+46 info attempt registry request try #1 at 3:26:22 PM
+47 http request GET https://registry.npmjs.org/bower
+48 verbose request uri https://registry.npmjs.org/gulp
+49 verbose request no auth needed
+50 info attempt registry request try #1 at 3:26:22 PM
+51 http request GET https://registry.npmjs.org/gulp
+52 http 200 https://registry.npmjs.org/bower
+53 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+53 verbose headers   etag: '"AC7OSZ8KFR8JCTZ7TEFFUW4KN"',
+53 verbose headers   'content-type': 'application/json',
+53 verbose headers   'cache-control': 'max-age=60',
+53 verbose headers   'content-length': '136284',
+53 verbose headers   'accept-ranges': 'bytes',
+53 verbose headers   date: 'Sat, 07 Nov 2015 20:26:22 GMT',
+53 verbose headers   via: '1.1 varnish',
+53 verbose headers   age: '53',
+53 verbose headers   connection: 'keep-alive',
+53 verbose headers   'x-served-by': 'cache-iad2135-IAD',
+53 verbose headers   'x-cache': 'HIT',
+53 verbose headers   'x-cache-hits': '1',
+53 verbose headers   'x-timer': 'S1446927982.960334,VS0,VE0',
+53 verbose headers   vary: 'Accept' }
+54 silly get cb [ 200,
+54 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+54 silly get     etag: '"AC7OSZ8KFR8JCTZ7TEFFUW4KN"',
+54 silly get     'content-type': 'application/json',
+54 silly get     'cache-control': 'max-age=60',
+54 silly get     'content-length': '136284',
+54 silly get     'accept-ranges': 'bytes',
+54 silly get     date: 'Sat, 07 Nov 2015 20:26:22 GMT',
+54 silly get     via: '1.1 varnish',
+54 silly get     age: '53',
+54 silly get     connection: 'keep-alive',
+54 silly get     'x-served-by': 'cache-iad2135-IAD',
+54 silly get     'x-cache': 'HIT',
+54 silly get     'x-cache-hits': '1',
+54 silly get     'x-timer': 'S1446927982.960334,VS0,VE0',
+54 silly get     vary: 'Accept' } ]
+55 verbose get saving bower to /Users/eos/.npm/registry.npmjs.org/bower/.cache.json
+56 http 200 https://registry.npmjs.org/foundation-cli
+57 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+57 verbose headers   etag: '"EJMMWC9X81ETAC85T0EFOYEGZ"',
+57 verbose headers   'content-type': 'application/json',
+57 verbose headers   'cache-control': 'max-age=60',
+57 verbose headers   'content-length': '18197',
+57 verbose headers   'accept-ranges': 'bytes',
+57 verbose headers   date: 'Sat, 07 Nov 2015 20:26:23 GMT',
+57 verbose headers   via: '1.1 varnish',
+57 verbose headers   age: '0',
+57 verbose headers   connection: 'keep-alive',
+57 verbose headers   'x-served-by': 'cache-iad2144-IAD',
+57 verbose headers   'x-cache': 'MISS',
+57 verbose headers   'x-cache-hits': '0',
+57 verbose headers   'x-timer': 'S1446927982.969664,VS0,VE71',
+57 verbose headers   vary: 'Accept' }
+58 silly get cb [ 200,
+58 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+58 silly get     etag: '"EJMMWC9X81ETAC85T0EFOYEGZ"',
+58 silly get     'content-type': 'application/json',
+58 silly get     'cache-control': 'max-age=60',
+58 silly get     'content-length': '18197',
+58 silly get     'accept-ranges': 'bytes',
+58 silly get     date: 'Sat, 07 Nov 2015 20:26:23 GMT',
+58 silly get     via: '1.1 varnish',
+58 silly get     age: '0',
+58 silly get     connection: 'keep-alive',
+58 silly get     'x-served-by': 'cache-iad2144-IAD',
+58 silly get     'x-cache': 'MISS',
+58 silly get     'x-cache-hits': '0',
+58 silly get     'x-timer': 'S1446927982.969664,VS0,VE71',
+58 silly get     vary: 'Accept' } ]
+59 verbose get saving foundation-cli to /Users/eos/.npm/registry.npmjs.org/foundation-cli/.cache.json
+60 verbose makeDirectory /Users/eos/.npm creation not in flight; initializing
+61 silly makeDirectory /Users/eos/.npm uid: 501 gid: 20
+62 verbose makeDirectory /Users/eos/.npm creation already in flight; waiting
+63 silly addNameRange number 2 { name: 'foundation-cli', range: '*', hasData: true }
+64 silly addNameRange versions [ 'foundation-cli',
+64 silly addNameRange   [ '0.1.0',
+64 silly addNameRange     '0.2.0',
+64 silly addNameRange     '1.0.0-rc.1',
+64 silly addNameRange     '1.0.0',
+64 silly addNameRange     '1.0.1',
+64 silly addNameRange     '1.0.2',
+64 silly addNameRange     '1.0.3',
+64 silly addNameRange     '1.0.4',
+64 silly addNameRange     '1.1.0',
+64 silly addNameRange     '1.1.1',
+64 silly addNameRange     '1.1.2',
+64 silly addNameRange     '2.0.0-beta',
+64 silly addNameRange     '2.0.0-beta.2' ] ]
+65 silly addNamed foundation-cli@1.1.2
+66 verbose addNamed "1.1.2" is a plain semver version for foundation-cli
+67 silly mapToRegistry name foundation-cli
+68 silly mapToRegistry using default registry
+69 silly mapToRegistry registry https://registry.npmjs.org/
+70 silly mapToRegistry uri https://registry.npmjs.org/foundation-cli
+71 verbose addRemoteTarball https://registry.npmjs.org/foundation-cli/-/foundation-cli-1.1.2.tgz not in flight; adding
+72 verbose addRemoteTarball [ 'https://registry.npmjs.org/foundation-cli/-/foundation-cli-1.1.2.tgz',
+72 verbose addRemoteTarball   '909052a04d7c9070ba466073f314022ec8cfec16' ]
+73 silly addNameRange number 2 { name: 'bower', range: '*', hasData: true }
+74 silly addNameRange versions [ 'bower',
+74 silly addNameRange   [ '0.1.0',
+74 silly addNameRange     '0.1.2',
+74 silly addNameRange     '0.1.3',
+74 silly addNameRange     '0.2.0',
+74 silly addNameRange     '0.3.0',
+74 silly addNameRange     '0.3.1',
+74 silly addNameRange     '0.3.2',
+74 silly addNameRange     '0.4.0',
+74 silly addNameRange     '0.5.0',
+74 silly addNameRange     '0.5.1',
+74 silly addNameRange     '0.6.0',
+74 silly addNameRange     '0.6.1',
+74 silly addNameRange     '0.6.2',
+74 silly addNameRange     '0.6.3',
+74 silly addNameRange     '0.6.4',
+74 silly addNameRange     '0.6.5',
+74 silly addNameRange     '0.6.6',
+74 silly addNameRange     '0.6.7',
+74 silly addNameRange     '0.6.8',
+74 silly addNameRange     '0.7.0',
+74 silly addNameRange     '0.7.1',
+74 silly addNameRange     '0.8.0',
+74 silly addNameRange     '0.8.1',
+74 silly addNameRange     '0.8.2',
+74 silly addNameRange     '0.8.3',
+74 silly addNameRange     '0.8.4',
+74 silly addNameRange     '0.8.5',
+74 silly addNameRange     '0.8.6',
+74 silly addNameRange     '0.9.0',
+74 silly addNameRange     '0.9.1',
+74 silly addNameRange     '0.9.2',
+74 silly addNameRange     '0.10.0',
+74 silly addNameRange     '1.0.0',
+74 silly addNameRange     '1.0.1',
+74 silly addNameRange     '1.0.2',
+74 silly addNameRange     '1.0.3',
+74 silly addNameRange     '1.1.0',
+74 silly addNameRange     '1.1.1',
+74 silly addNameRange     '1.1.2',
+74 silly addNameRange     '1.2.0',
+74 silly addNameRange     '1.2.1',
+74 silly addNameRange     '1.2.2',
+74 silly addNameRange     '1.2.3',
+74 silly addNameRange     '1.2.4',
+74 silly addNameRange     '1.2.5',
+74 silly addNameRange     '1.2.6',
+74 silly addNameRange     '1.2.7',
+74 silly addNameRange     '1.2.8',
+74 silly addNameRange     '1.3.0',
+74 silly addNameRange     '1.3.1',
+74 silly addNameRange     '1.3.2',
+74 silly addNameRange     '1.3.3',
+74 silly addNameRange     '1.3.4',
+74 silly addNameRange     '1.3.5',
+74 silly addNameRange     '1.3.6',
+74 silly addNameRange     '1.3.7',
+74 silly addNameRange     '1.3.8',
+74 silly addNameRange     '1.3.9',
+74 silly addNameRange     '1.3.10',
+74 silly addNameRange     '1.3.11',
+74 silly addNameRange     '1.3.12',
+74 silly addNameRange     '1.4.0',
+74 silly addNameRange     '1.4.1',
+74 silly addNameRange     '1.5.0',
+74 silly addNameRange     '1.5.1',
+74 silly addNameRange     '1.5.2',
+74 silly addNameRange     '1.5.3',
+74 silly addNameRange     '1.6.2',
+74 silly addNameRange     '1.6.3',
+74 silly addNameRange     '1.6.4',
+74 silly addNameRange     '1.6.5' ] ]
+75 silly addNamed bower@1.6.5
+76 verbose addNamed "1.6.5" is a plain semver version for bower
+77 silly mapToRegistry name bower
+78 silly mapToRegistry using default registry
+79 silly mapToRegistry registry https://registry.npmjs.org/
+80 silly mapToRegistry uri https://registry.npmjs.org/bower
+81 verbose addRemoteTarball https://registry.npmjs.org/bower/-/bower-1.6.5.tgz not in flight; adding
+82 verbose addRemoteTarball [ 'https://registry.npmjs.org/bower/-/bower-1.6.5.tgz',
+82 verbose addRemoteTarball   '59d457122a161e42cc1625bbab8179c214b7ac11' ]
+83 info retry fetch attempt 1 at 3:26:23 PM
+84 info attempt registry request try #1 at 3:26:23 PM
+85 http fetch GET https://registry.npmjs.org/bower/-/bower-1.6.5.tgz
+86 info retry fetch attempt 1 at 3:26:23 PM
+87 info attempt registry request try #1 at 3:26:23 PM
+88 http fetch GET https://registry.npmjs.org/foundation-cli/-/foundation-cli-1.1.2.tgz
+89 http 200 https://registry.npmjs.org/gulp
+90 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+90 verbose headers   etag: '"4A85TLVHDA1IEW3EK32AE06PM"',
+90 verbose headers   'content-type': 'application/json',
+90 verbose headers   'cache-control': 'max-age=60',
+90 verbose headers   'content-length': '107616',
+90 verbose headers   'accept-ranges': 'bytes',
+90 verbose headers   date: 'Sat, 07 Nov 2015 20:26:23 GMT',
+90 verbose headers   via: '1.1 varnish',
+90 verbose headers   age: '0',
+90 verbose headers   connection: 'keep-alive',
+90 verbose headers   'x-served-by': 'cache-iad2139-IAD',
+90 verbose headers   'x-cache': 'HIT',
+90 verbose headers   'x-cache-hits': '1',
+90 verbose headers   'x-timer': 'S1446927982.960116,VS0,VE59',
+90 verbose headers   vary: 'Accept' }
+91 silly get cb [ 200,
+91 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+91 silly get     etag: '"4A85TLVHDA1IEW3EK32AE06PM"',
+91 silly get     'content-type': 'application/json',
+91 silly get     'cache-control': 'max-age=60',
+91 silly get     'content-length': '107616',
+91 silly get     'accept-ranges': 'bytes',
+91 silly get     date: 'Sat, 07 Nov 2015 20:26:23 GMT',
+91 silly get     via: '1.1 varnish',
+91 silly get     age: '0',
+91 silly get     connection: 'keep-alive',
+91 silly get     'x-served-by': 'cache-iad2139-IAD',
+91 silly get     'x-cache': 'HIT',
+91 silly get     'x-cache-hits': '1',
+91 silly get     'x-timer': 'S1446927982.960116,VS0,VE59',
+91 silly get     vary: 'Accept' } ]
+92 verbose get saving gulp to /Users/eos/.npm/registry.npmjs.org/gulp/.cache.json
+93 silly addNameRange number 2 { name: 'gulp', range: '*', hasData: true }
+94 silly addNameRange versions [ 'gulp',
+94 silly addNameRange   [ '0.0.1',
+94 silly addNameRange     '0.0.2',
+94 silly addNameRange     '0.0.3',
+94 silly addNameRange     '0.0.4',
+94 silly addNameRange     '0.0.5',
+94 silly addNameRange     '0.0.7',
+94 silly addNameRange     '0.0.8',
+94 silly addNameRange     '0.0.9',
+94 silly addNameRange     '0.1.0',
+94 silly addNameRange     '0.2.0',
+94 silly addNameRange     '1.0.0',
+94 silly addNameRange     '1.1.0',
+94 silly addNameRange     '1.2.0',
+94 silly addNameRange     '1.2.1',
+94 silly addNameRange     '2.0.0',
+94 silly addNameRange     '2.0.1',
+94 silly addNameRange     '2.1.0',
+94 silly addNameRange     '2.2.0',
+94 silly addNameRange     '2.3.0',
+94 silly addNameRange     '2.4.0',
+94 silly addNameRange     '2.4.1',
+94 silly addNameRange     '2.6.0',
+94 silly addNameRange     '2.6.1',
+94 silly addNameRange     '2.7.0',
+94 silly addNameRange     '3.0.0',
+94 silly addNameRange     '3.1.1',
+94 silly addNameRange     '3.1.2',
+94 silly addNameRange     '3.1.3',
+94 silly addNameRange     '3.1.4',
+94 silly addNameRange     '3.2.0',
+94 silly addNameRange     '3.2.1',
+94 silly addNameRange     '3.2.2',
+94 silly addNameRange     '3.2.3',
+94 silly addNameRange     '3.2.4',
+94 silly addNameRange     '3.2.5',
+94 silly addNameRange     '3.3.0',
+94 silly addNameRange     '3.3.1',
+94 silly addNameRange     '3.3.2',
+94 silly addNameRange     '3.3.4',
+94 silly addNameRange     '3.4.0',
+94 silly addNameRange     '3.5.0',
+94 silly addNameRange     '3.5.1',
+94 silly addNameRange     '3.5.2',
+94 silly addNameRange     '3.5.5',
+94 silly addNameRange     '3.5.6',
+94 silly addNameRange     '3.6.0',
+94 silly addNameRange     '3.6.1',
+94 silly addNameRange     '3.6.2',
+94 silly addNameRange     '3.7.0',
+94 silly addNameRange     '3.8.0',
+94 silly addNameRange     '3.8.1',
+94 silly addNameRange     '3.8.2',
+94 silly addNameRange     '3.8.3',
+94 silly addNameRange     '3.8.4',
+94 silly addNameRange     '3.8.5',
+94 silly addNameRange     '3.8.6',
+94 silly addNameRange     '3.8.7',
+94 silly addNameRange     '3.8.8',
+94 silly addNameRange     '3.8.9',
+94 silly addNameRange     '3.8.10',
+94 silly addNameRange     '3.8.11',
+94 silly addNameRange     '3.9.0' ] ]
+95 silly addNamed gulp@3.9.0
+96 verbose addNamed "3.9.0" is a plain semver version for gulp
+97 silly mapToRegistry name gulp
+98 silly mapToRegistry using default registry
+99 silly mapToRegistry registry https://registry.npmjs.org/
+100 silly mapToRegistry uri https://registry.npmjs.org/gulp
+101 verbose addRemoteTarball https://registry.npmjs.org/gulp/-/gulp-3.9.0.tgz not in flight; adding
+102 verbose addRemoteTarball [ 'https://registry.npmjs.org/gulp/-/gulp-3.9.0.tgz',
+102 verbose addRemoteTarball   'cf1fba4cb558bb8c6ae6c9613f583ae2620d214a' ]
+103 info retry fetch attempt 1 at 3:26:23 PM
+104 info attempt registry request try #1 at 3:26:23 PM
+105 http fetch GET https://registry.npmjs.org/gulp/-/gulp-3.9.0.tgz
+106 http fetch 200 https://registry.npmjs.org/foundation-cli/-/foundation-cli-1.1.2.tgz
+107 silly fetchAndShaCheck shasum 909052a04d7c9070ba466073f314022ec8cfec16
+108 verbose addTmpTarball /var/folders/q5/w1qvgr410wg06qyvvqzwg1c00000gn/T/npm-12165-e9fcb043/registry.npmjs.org/foundation-cli/-/foundation-cli-1.1.2.tgz not in flight; adding
+109 verbose addTmpTarball already have metadata; skipping unpack for foundation-cli@1.1.2
+110 silly cache afterAdd foundation-cli@1.1.2
+111 verbose afterAdd /Users/eos/.npm/foundation-cli/1.1.2/package/package.json not in flight; writing
+112 verbose afterAdd /Users/eos/.npm/foundation-cli/1.1.2/package/package.json written
+113 http fetch 200 https://registry.npmjs.org/bower/-/bower-1.6.5.tgz
+114 http fetch 200 https://registry.npmjs.org/gulp/-/gulp-3.9.0.tgz
+115 silly fetchAndShaCheck shasum cf1fba4cb558bb8c6ae6c9613f583ae2620d214a
+116 verbose addTmpTarball /var/folders/q5/w1qvgr410wg06qyvvqzwg1c00000gn/T/npm-12165-e9fcb043/registry.npmjs.org/gulp/-/gulp-3.9.0.tgz not in flight; adding
+117 verbose addTmpTarball already have metadata; skipping unpack for gulp@3.9.0
+118 silly cache afterAdd gulp@3.9.0
+119 verbose afterAdd /Users/eos/.npm/gulp/3.9.0/package/package.json not in flight; writing
+120 verbose afterAdd /Users/eos/.npm/gulp/3.9.0/package/package.json written
+121 silly fetchAndShaCheck shasum 59d457122a161e42cc1625bbab8179c214b7ac11
+122 verbose addTmpTarball /var/folders/q5/w1qvgr410wg06qyvvqzwg1c00000gn/T/npm-12165-e9fcb043/registry.npmjs.org/bower/-/bower-1.6.5.tgz not in flight; adding
+123 verbose addTmpTarball already have metadata; skipping unpack for bower@1.6.5
+124 silly cache afterAdd bower@1.6.5
+125 verbose afterAdd /Users/eos/.npm/bower/1.6.5/package/package.json not in flight; writing
+126 verbose afterAdd /Users/eos/.npm/bower/1.6.5/package/package.json written
+127 silly install resolved [ { name: 'foundation-cli',
+127 silly install resolved     version: '1.1.2',
+127 silly install resolved     description: 'Command-line interface for Foundation for Apps.',
+127 silly install resolved     author: { name: 'ZURB' },
+127 silly install resolved     main: 'lib/index.js',
+127 silly install resolved     bin: { 'foundation-apps': './bin/cli.js' },
+127 silly install resolved     dependencies:
+127 silly install resolved      { async: '^0.9.0',
+127 silly install resolved        bower: '^1.3.12',
+127 silly install resolved        colors: '^1.0.3',
+127 silly install resolved        exec: '^0.1.2',
+127 silly install resolved        'is-root': '^1.0.0',
+127 silly install resolved        nopt: '^3.0.1',
+127 silly install resolved        npm: '^2.1.12',
+127 silly install resolved        open: '0.0.5',
+127 silly install resolved        rimraf: '^2.2.8',
+127 silly install resolved        semver: '^4.3.0',
+127 silly install resolved        'string-length': '^1.0.0',
+127 silly install resolved        'update-notifier': '^0.2.2',
+127 silly install resolved        which: '^1.0.8' },
+127 silly install resolved     repository:
+127 silly install resolved      { type: 'git',
+127 silly install resolved        url: 'git+https://github.com/zurb/foundation-cli.git' },
+127 silly install resolved     bugs: { url: 'https://github.com/zurb/foundation-cli/issues' },
+127 silly install resolved     scripts:
+127 silly install resolved      { postinstall: 'node lib/welcome.js',
+127 silly install resolved        test: 'node bin/cli.js new test --debug' },
+127 silly install resolved     preferGlobal: true,
+127 silly install resolved     engines: { node: '>=0.10.33' },
+127 silly install resolved     license: 'MIT',
+127 silly install resolved     gitHead: 'a2998d6e14c5e921961f173960735ec353e84843',
+127 silly install resolved     homepage: 'https://github.com/zurb/foundation-cli#readme',
+127 silly install resolved     _id: 'foundation-cli@1.1.2',
+127 silly install resolved     _shasum: '909052a04d7c9070ba466073f314022ec8cfec16',
+127 silly install resolved     _from: 'foundation-cli@*',
+127 silly install resolved     _npmVersion: '2.8.4',
+127 silly install resolved     _nodeVersion: '0.10.38',
+127 silly install resolved     _npmUser: { name: 'gakimball', email: 'geoff@zurb.com' },
+127 silly install resolved     dist:
+127 silly install resolved      { shasum: '909052a04d7c9070ba466073f314022ec8cfec16',
+127 silly install resolved        tarball: 'http://registry.npmjs.org/foundation-cli/-/foundation-cli-1.1.2.tgz' },
+127 silly install resolved     maintainers: [ [Object], [Object] ],
+127 silly install resolved     directories: {},
+127 silly install resolved     _resolved: 'https://registry.npmjs.org/foundation-cli/-/foundation-cli-1.1.2.tgz' },
+127 silly install resolved   { name: 'gulp',
+127 silly install resolved     description: 'The streaming build system',
+127 silly install resolved     version: '3.9.0',
+127 silly install resolved     homepage: 'http://gulpjs.com',
+127 silly install resolved     repository: { type: 'git', url: 'git+https://github.com/gulpjs/gulp.git' },
+127 silly install resolved     author:
+127 silly install resolved      { name: 'Fractal',
+127 silly install resolved        email: 'contact@wearefractal.com',
+127 silly install resolved        url: 'http://wearefractal.com/' },
+127 silly install resolved     tags: [ 'build', 'stream', 'system', 'make', 'tool', 'asset', 'pipeline' ],
+127 silly install resolved     files: [ 'index.js', 'lib', 'bin', 'completion' ],
+127 silly install resolved     bin: { gulp: './bin/gulp.js' },
+127 silly install resolved     man: [ 'gulp.1' ],
+127 silly install resolved     dependencies:
+127 silly install resolved      { archy: '^1.0.0',
+127 silly install resolved        chalk: '^1.0.0',
+127 silly install resolved        deprecated: '^0.0.1',
+127 silly install resolved        'gulp-util': '^3.0.0',
+127 silly install resolved        interpret: '^0.6.2',
+127 silly install resolved        liftoff: '^2.1.0',
+127 silly install resolved        minimist: '^1.1.0',
+127 silly install resolved        orchestrator: '^0.3.0',
+127 silly install resolved        'pretty-hrtime': '^1.0.0',
+127 silly install resolved        semver: '^4.1.0',
+127 silly install resolved        tildify: '^1.0.0',
+127 silly install resolved        v8flags: '^2.0.2',
+127 silly install resolved        'vinyl-fs': '^0.3.0' },
+127 silly install resolved     devDependencies:
+127 silly install resolved      { coveralls: '^2.7.0',
+127 silly install resolved        'graceful-fs': '^3.0.0',
+127 silly install resolved        istanbul: '^0.3.0',
+127 silly install resolved        jscs: '~1.12.0',
+127 silly install resolved        jshint: '^2.5.0',
+127 silly install resolved        'jshint-stylish': '^1.0.0',
+127 silly install resolved        'marked-man': '^0.1.3',
+127 silly install resolved        mkdirp: '^0.5.0',
+127 silly install resolved        mocha: '^2.0.1',
+127 silly install resolved        'mocha-lcov-reporter': '^0.0.1',
+127 silly install resolved        q: '^1.0.0',
+127 silly install resolved        rimraf: '^2.2.5',
+127 silly install resolved        should: '^5.0.1' },
+127 silly install resolved     scripts:
+127 silly install resolved      { prepublish: 'marked-man --name gulp docs/CLI.md > gulp.1',
+127 silly install resolved        lint: 'jshint lib bin test index.js --reporter node_modules/jshint-stylish/stylish.js --exclude node_modules && jscs lib bin test index.js',
+127 silly install resolved        test: 'npm run-script lint && mocha --reporter spec',
+127 silly install resolved        coveralls: 'istanbul cover _mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage' },
+127 silly install resolved     engines: { node: '>= 0.9' },
+127 silly install resolved     license: 'MIT',
+127 silly install resolved     gitHead: '657213a52d5e9c19b85df6a42f76341a98c08ae8',
+127 silly install resolved     bugs: { url: 'https://github.com/gulpjs/gulp/issues' },
+127 silly install resolved     _id: 'gulp@3.9.0',
+127 silly install resolved     _shasum: 'cf1fba4cb558bb8c6ae6c9613f583ae2620d214a',
+127 silly install resolved     _from: 'gulp@*',
+127 silly install resolved     _npmVersion: '2.8.3',
+127 silly install resolved     _nodeVersion: '0.10.36',
+127 silly install resolved     _npmUser: { name: 'phated', email: 'blaine@iceddev.com' },
+127 silly install resolved     maintainers: [ [Object], [Object] ],
+127 silly install resolved     dist:
+127 silly install resolved      { shasum: 'cf1fba4cb558bb8c6ae6c9613f583ae2620d214a',
+127 silly install resolved        tarball: 'http://registry.npmjs.org/gulp/-/gulp-3.9.0.tgz' },
+127 silly install resolved     directories: {},
+127 silly install resolved     _resolved: 'https://registry.npmjs.org/gulp/-/gulp-3.9.0.tgz' },
+127 silly install resolved   { name: 'bower',
+127 silly install resolved     version: '1.6.5',
+127 silly install resolved     description: 'The browser package manager',
+127 silly install resolved     author: { name: 'Twitter' },
+127 silly install resolved     license: 'MIT',
+127 silly install resolved     repository: { type: 'git', url: 'git+https://github.com/bower/bower.git' },
+127 silly install resolved     main: 'lib',
+127 silly install resolved     homepage: 'http://bower.io',
+127 silly install resolved     engines: { node: '>=0.10.0' },
+127 silly install resolved     keywords: [ 'bower' ],
+127 silly install resolved     dependencies:
+127 silly install resolved      { abbrev: '^1.0.5',
+127 silly install resolved        archy: '1.0.0',
+127 silly install resolved        'bower-config': '^1.2.2',
+127 silly install resolved        'bower-endpoint-parser': '^0.2.2',
+127 silly install resolved        'bower-json': '^0.4.0',
+127 silly install resolved        'bower-logger': '^0.2.2',
+127 silly install resolved        'bower-registry-client': '^1.0.0',
+127 silly install resolved        cardinal: '0.4.4',
+127 silly install resolved        chalk: '^1.0.0',
+127 silly install resolved        chmodr: '^1.0.2',
+127 silly install resolved        configstore: '^0.3.2',
+127 silly install resolved        'decompress-zip': '^0.1.0',
+127 silly install resolved        destroy: '^1.0.3',
+127 silly install resolved        'fs-write-stream-atomic': '^1.0.4',
+127 silly install resolved        fstream: '^1.0.3',
+127 silly install resolved        'fstream-ignore': '^1.0.2',
+127 silly install resolved        github: '^0.2.3',
+127 silly install resolved        glob: '^4.3.2',
+127 silly install resolved        'graceful-fs': '^3.0.5',
+127 silly install resolved        handlebars: '^2.0.0',
+127 silly install resolved        inquirer: '0.10.0',
+127 silly install resolved        insight: '^0.7.0',
+127 silly install resolved        'is-root': '^1.0.0',
+127 silly install resolved        junk: '^1.0.0',
+127 silly install resolved        lockfile: '^1.0.0',
+127 silly install resolved        'lru-cache': '^2.5.0',
+127 silly install resolved        'md5-hex': '^1.0.2',
+127 silly install resolved        mkdirp: '0.5.0',
+127 silly install resolved        mout: '^0.11.0',
+127 silly install resolved        nopt: '^3.0.1',
+127 silly install resolved        opn: '^1.0.1',
+127 silly install resolved        'p-throttler': '0.1.1',
+127 silly install resolved        promptly: '0.2.0',
+127 silly install resolved        q: '^1.1.2',
+127 silly install resolved        request: '2.53.0',
+127 silly install resolved        'request-progress': '0.3.1',
+127 silly install resolved        retry: '0.6.1',
+127 silly install resolved        rimraf: '^2.2.8',
+127 silly install resolved        semver: '^2.3.0',
+127 silly install resolved        'shell-quote': '^1.4.2',
+127 silly install resolved        'stringify-object': '^1.0.0',
+127 silly install resolved        'tar-fs': '^1.4.1',
+127 silly install resolved        tmp: '0.0.24',
+127 silly install resolved        'update-notifier': '^0.3.0',
+127 silly install resolved        'user-home': '^1.1.0',
+127 silly install resolved        which: '^1.0.8' },
+127 silly install resolved     devDependencies:
+127 silly install resolved      { chai: '^1.10.0',
+127 silly install resolved        coveralls: '^2.11.2',
+127 silly install resolved        'expect.js': '^0.3.1',
+127 silly install resolved        grunt: '^0.4.5',
+127 silly install resolved        'grunt-cli': '^0.1.13',
+127 silly install resolved        'grunt-contrib-jshint': '^0.10.0',
+127 silly install resolved        'grunt-contrib-watch': '^0.6.1',
+127 silly install resolved        'grunt-exec': '^0.4.6',
+127 silly install resolved        'grunt-simple-mocha': '^0.4.0',
+127 silly install resolved        istanbul: '^0.3.5',
+127 silly install resolved        'load-grunt-tasks': '^2.0.0',
+127 silly install resolved        mocha: '^2.1.0',
+127 silly install resolved        multiline: '^1.0.2',
+127 silly install resolved        nock: '^2.13.0',
+127 silly install resolved        'node-uuid': '^1.4.2',
+127 silly install resolved        'npm-shrinkwrap': '^5.4.1',
+127 silly install resolved        proxyquire: '^1.3.0',
+127 silly install resolved        'spawn-sync': '^1.0.5' },
+127 silly install resolved     scripts: { test: 'grunt test' },
+127 silly install resolved     bin: { bower: 'bin/bower' },
+127 silly install resolved     files: [ 'bin', 'lib', 'templates' ],
+127 silly install resolved     gitHead: 'a022cdc75ee0693af813a87b40f5de4c74b7baae',
+127 silly install resolved     bugs: { url: 'https://github.com/bower/bower/issues' },
+127 silly install resolved     bundleDependencies:
+127 silly install resolved      [ 'abbrev',
+127 silly install resolved        'archy',
+127 silly install resolved        'bower-config',
+127 silly install resolved        'bower-endpoint-parser',
+127 silly install resolved        'bower-json',
+127 silly install resolved        'bower-logger',
+127 silly install resolved        'bower-registry-client',
+127 silly install resolved        'cardinal',
+127 silly install resolved        'chalk',
+127 silly install resolved        'chmodr',
+127 silly install resolved        'configstore',
+127 silly install resolved        'decompress-zip',
+127 silly install resolved        'destroy',
+127 silly install resolved        'fs-write-stream-atomic',
+127 silly install resolved        'fstream',
+127 silly install resolved        'fstream-ignore',
+127 silly install resolved        'github',
+127 silly install resolved        'glob',
+127 silly install resolved        'graceful-fs',
+127 silly install resolved        'handlebars',
+127 silly install resolved        'inquirer',
+127 silly install resolved        'insight',
+127 silly install resolved        'is-root',
+127 silly install resolved        'junk',
+127 silly install resolved        'lockfile',
+127 silly install resolved        'lru-cache',
+127 silly install resolved        'md5-hex',
+127 silly install resolved        'mkdirp',
+127 silly install resolved        'mout',
+127 silly install resolved        'nopt',
+127 silly install resolved        'opn',
+127 silly install resolved        'p-throttler',
+127 silly install resolved        'promptly',
+127 silly install resolved        'q',
+127 silly install resolved        'request',
+127 silly install resolved        'request-progress',
+127 silly install resolved        'retry',
+127 silly install resolved        'rimraf',
+127 silly install resolved        'semver',
+127 silly install resolved        'shell-quote',
+127 silly install resolved        'stringify-object',
+127 silly install resolved        'tar-fs',
+127 silly install resolved        'tmp',
+127 silly install resolved        'update-notifier',
+127 silly install resolved        'user-home',
+127 silly install resolved        'which' ],
+127 silly install resolved     _id: 'bower@1.6.5',
+127 silly install resolved     _shasum: '59d457122a161e42cc1625bbab8179c214b7ac11',
+127 silly install resolved     _from: 'bower@*',
+127 silly install resolved     _npmVersion: '2.14.8',
+127 silly install resolved     _nodeVersion: '4.1.1',
+127 silly install resolved     _npmUser: { name: 'sheerun', email: 'sheerun@sher.pl' },
+127 silly install resolved     dist:
+127 silly install resolved      { shasum: '59d457122a161e42cc1625bbab8179c214b7ac11',
+127 silly install resolved        tarball: 'http://registry.npmjs.org/bower/-/bower-1.6.5.tgz' },
+127 silly install resolved     maintainers: [ [Object], [Object], [Object], [Object], [Object], [Object] ],
+127 silly install resolved     directories: {},
+127 silly install resolved     _resolved: 'https://registry.npmjs.org/bower/-/bower-1.6.5.tgz' } ]
+128 info install foundation-cli@1.1.2 into /usr/local/lib
+129 info install gulp@3.9.0 into /usr/local/lib
+130 info install bower@1.6.5 into /usr/local/lib
+131 info installOne foundation-cli@1.1.2
+132 verbose installOne of foundation-cli to /usr/local/lib not in flight; installing
+133 info installOne gulp@3.9.0
+134 verbose installOne of gulp to /usr/local/lib not in flight; installing
+135 info installOne bower@1.6.5
+136 verbose installOne of bower to /usr/local/lib not in flight; installing
+137 verbose makeDirectory /Users/eos/.npm/_locks creation not in flight; initializing
+138 silly makeDirectory /Users/eos/.npm/_locks uid: 501 gid: 20
+139 verbose makeDirectory /Users/eos/.npm/_locks creation already in flight; waiting
+140 verbose makeDirectory /Users/eos/.npm/_locks creation already in flight; waiting
+141 verbose lock using /Users/eos/.npm/_locks/foundation-cli-51ebe40b25d22b9e.lock for /usr/local/lib/node_modules/foundation-cli
+142 verbose lock using /Users/eos/.npm/_locks/gulp-709d00e5d169ceb3.lock for /usr/local/lib/node_modules/gulp
+143 silly install write writing foundation-cli 1.1.2 to /usr/local/lib/node_modules/foundation-cli
+144 silly install write writing gulp 3.9.0 to /usr/local/lib/node_modules/gulp
+145 verbose lock using /Users/eos/.npm/_locks/bower-e8debc5417026b57.lock for /usr/local/lib/node_modules/bower
+146 silly install write writing bower 1.6.5 to /usr/local/lib/node_modules/bower
+147 verbose unbuild lib/node_modules/foundation-cli
+148 verbose unbuild lib/node_modules/gulp
+149 verbose unbuild lib/node_modules/bower
+150 silly gentlyRm /usr/local/lib/node_modules/foundation-cli is being purged from base /usr/local
+151 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/foundation-cli
+152 silly gentlyRm /usr/local/lib/node_modules/gulp is being purged from base /usr/local
+153 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/gulp
+154 verbose tar unpack /Users/eos/.npm/foundation-cli/1.1.2/package.tgz
+155 verbose tar unpacking to /usr/local/lib/node_modules/foundation-cli
+156 silly gentlyRm /usr/local/lib/node_modules/foundation-cli is being purged
+157 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/foundation-cli
+158 verbose tar unpack /Users/eos/.npm/gulp/3.9.0/package.tgz
+159 verbose tar unpacking to /usr/local/lib/node_modules/gulp
+160 silly gentlyRm /usr/local/lib/node_modules/gulp is being purged
+161 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/gulp
+162 silly gentlyRm /usr/local/lib/node_modules/bower is being purged from base /usr/local
+163 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/bower
+164 silly gunzTarPerm modes [ '755', '644' ]
+165 silly gunzTarPerm modes [ '755', '644' ]
+166 verbose tar unpack /Users/eos/.npm/bower/1.6.5/package.tgz
+167 verbose tar unpacking to /usr/local/lib/node_modules/bower
+168 silly gentlyRm /usr/local/lib/node_modules/bower is being purged
+169 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/bower
+170 silly gunzTarPerm modes [ '755', '644' ]
+171 error tar.unpack untar error /Users/eos/.npm/foundation-cli/1.1.2/package.tgz
+172 error tar.unpack untar error /Users/eos/.npm/gulp/3.9.0/package.tgz
+173 verbose unlock done using /Users/eos/.npm/_locks/foundation-cli-51ebe40b25d22b9e.lock for /usr/local/lib/node_modules/foundation-cli
+174 error tar.unpack untar error /Users/eos/.npm/bower/1.6.5/package.tgz
+175 verbose unlock done using /Users/eos/.npm/_locks/gulp-709d00e5d169ceb3.lock for /usr/local/lib/node_modules/gulp
+176 verbose unlock done using /Users/eos/.npm/_locks/bower-e8debc5417026b57.lock for /usr/local/lib/node_modules/bower
+177 verbose fstream_path /usr/local/lib/node_modules/foundation-cli
+178 verbose fstream_type Directory
+179 verbose fstream_class DirWriter
+180 verbose stack Error: EACCES: permission denied, mkdir '/usr/local/lib/node_modules/foundation-cli'
+180 verbose stack     at Error (native)
+181 verbose fstream_stack /usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:35:25
+181 verbose fstream_stack /usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:47:53
+181 verbose fstream_stack FSReqWrap.oncomplete (fs.js:82:15)
+182 verbose cwd /Users/eos/Desktop/Yale Hacks/dasRunaway/projectRunaway
+183 error Darwin 15.0.0
+184 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "-g" "foundation-cli" "bower" "gulp"
+185 error node v4.2.2
+186 error npm  v2.14.7
+187 error path /usr/local/lib/node_modules/foundation-cli
+188 error code EACCES
+189 error errno -13
+190 error syscall mkdir
+191 error Error: EACCES: permission denied, mkdir '/usr/local/lib/node_modules/foundation-cli'
+191 error     at Error (native)
+191 error  { [Error: EACCES: permission denied, mkdir '/usr/local/lib/node_modules/foundation-cli']
+191 error   errno: -13,
+191 error   code: 'EACCES',
+191 error   syscall: 'mkdir',
+191 error   path: '/usr/local/lib/node_modules/foundation-cli',
+191 error   fstream_type: 'Directory',
+191 error   fstream_path: '/usr/local/lib/node_modules/foundation-cli',
+191 error   fstream_class: 'DirWriter',
+191 error   fstream_stack:
+191 error    [ '/usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:35:25',
+191 error      '/usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:47:53',
+191 error      'FSReqWrap.oncomplete (fs.js:82:15)' ] }
+192 error Please try running this command again as root/Administrator.
+193 verbose exit [ -13, true ]
+194 verbose unbuild lib/node_modules/foundation-cli
+195 silly gentlyRm /usr/local/lib/node_modules/foundation-cli is being purged from base /usr/local
+196 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/foundation-cli
+197 verbose unbuild lib/node_modules/gulp
+198 silly gentlyRm /usr/local/lib/node_modules/gulp is being purged from base /usr/local
+199 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/gulp
+200 verbose unbuild lib/node_modules/bower
+201 silly gentlyRm /usr/local/lib/node_modules/bower is being purged from base /usr/local
+202 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/bower
