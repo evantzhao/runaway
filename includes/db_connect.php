@@ -4,10 +4,10 @@ $mongo = new MongoClient("mongodb://username:password@ds052408.mongolab.com:5240
 
 if ($mongo) {	// If happy...
    $db = $mongo -> runaway;
-   $dataSet = $db-> airports;
+   $airports = $db-> airports;
+   $packages = $db-> packages;
 } else {
    echo json_encode(['status' => 'mongo connection error']);
    exit; 
 }
 ?> 
-
