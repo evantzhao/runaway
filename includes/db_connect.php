@@ -1,7 +1,9 @@
 <?php
 // Connect to a new mongo thingy.
 $mongo = new MongoClient("mongodb://username:password@ds052408.mongolab.com:52408/runaway");
-echo "dank"
+
+echo ("dank");
+
 if ($mongo) {	// If happy...
    $db = $mongo -> runaway;
    $dataSet = $db-> airports;
