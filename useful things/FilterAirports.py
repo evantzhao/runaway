@@ -1,6 +1,4 @@
-f = open('C:\\users\\Winston\\Documents\\Jetblue Origins.csv')
-airports = []
+f = open('C:\\users\\Winston\\Documents\\jetblueDestinations.txt')
 for line in f.readlines():
-    if line[:3] not in airports:
-        airports.append(line[:3])
-print(airports)
+    items=line.split(",")
+    print(items[4]+","+items[6]+","+items[7])
