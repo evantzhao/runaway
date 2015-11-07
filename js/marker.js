@@ -1,58 +1,78 @@
 var map = null;
 
+var crap =  [{ "_id" : { "$oid" : "563e537567df6f4bddd226dd"} , "origin" : true , "loc" : [ 40.639751 , -73.778925] , "airport" : "JFK"} , 
+            { "_id" : { "$oid" : "563e537567df6f4bddd226de"} , "origin" : true , "loc" : [ 26.072583 , -80.15275] , "airport" : "FLL"} , 
+            { "_id" : { "$oid" : "563e537567df6f4bddd226df"} , "origin" : true , "loc" : [ 37.618972 , -122.374889] , "airport" : "SFO"} , 
+            { "_id" : { "$oid" : "563e537567df6f4bddd226e0"} , "origin" : true , "loc" : [ 42.364347 , -71.005181] , "airport" : "BOS"} , 
+            { "_id" : { "$oid" : "563e537667df6f4bddd226e1"} , "origin" : true , "loc" : [ 33.817722 , -118.151611] , "airport" : "LGB"} , 
+            { "_id" : { "$oid" : "563e537667df6f4bddd226e2"} , "origin" : true , "loc" : [ 18.439417 , -66.001833] , "airport" : "SJU"} , 
+            { "_id" : { "$oid" : "563e537667df6f4bddd226e3"} , "origin" : true , "loc" : [ 28.429394 , -81.308994] , "airport" : "MCO"} , 
+            { "_id" : { "$oid" : "563e537667df6f4bddd226e4"} , "origin" : false , "loc" : [ 29.993389 , -90.258028] , "airport" : "\"MSY\""} , 
+            { "_id" : { "$oid" : "563e537667df6f4bddd226e5"} , "origin" : false , "loc" : [ 13.074603 , -59.492456] , "airport" : "\"BGI\""} , 
+            { "_id" : { "$oid" : "563e537667df6f4bddd226e6"} , "origin" : false , "loc" : [ 18.429664 , -69.668925] , "airport" : "\"SDQ\""} , 
+            { "_id" : { "$oid" : "563e537767df6f4bddd226e7"} , "origin" : false , "loc" : [ 21.036528 , -86.877083] , "airport" : "\"CUN\""} , 
+            { "_id" : { "$oid" : "563e537767df6f4bddd226e8"} , "origin" : false , "loc" : [ 19.7579 , -70.570033] , "airport" : "\"POP\""} , 
+            { "_id" : { "$oid" : "563e537767df6f4bddd226e9"} , "origin" : false , "loc" : [ 33.942536 , -118.408075] , "airport" : "\"LAX\""} , 
+            { "_id" : { "$oid" : "563e537767df6f4bddd226ea"} , "origin" : false , "loc" : [ 18.040953 , -63.1089] , "airport" : "\"SXM\""} ,
+             { "_id" : { "$oid" : "563e537767df6f4bddd226eb"} , "origin" : false , "loc" : [ 36.080056 , -115.15225] , "airport" : "\"LAS\""} ,
+              { "_id" : { "$oid" : "563e537867df6f4bddd226ec"} , "origin" : false , "loc" : [ 32.898647 , -80.040528] , "airport" : "\"CHS\""} , 
+              { "_id" : { "$oid" : "563e537867df6f4bddd226ed"} , "origin" : false , "loc" : [ 27.975472 , -82.53325] , "airport" : "\"TPA\""} , 
+              { "_id" : { "$oid" : "563e537867df6f4bddd226ee"} , "origin" : false , "loc" : [ 18.567367 , -68.363431] , "airport" : "\"PUJ\""} , 
+              { "_id" : { "$oid" : "563e537867df6f4bddd226ef"} , "origin" : false , "loc" : [ 12.501389 , -70.015221] , "airport" : "\"AUA\""} , 
+              { "_id" : { "$oid" : "563e537867df6f4bddd226f0"} , "origin" : false , "loc" : [ 26.536167 , -81.755167] , "airport" : "\"RSW\""} , 
+              { "_id" : { "$oid" : "563e537867df6f4bddd226f1"} , "origin" : false , "loc" : [ 32.733556 , -117.189667] , "airport" : "\"SAN\""} , 
+              { "_id" : { "$oid" : "563e537967df6f4bddd226f2"} , "origin" : false , "loc" : [ 13.733194 , -60.952597] , "airport" : "\"UVF\""} , 
+              { "_id" : { "$oid" : "563e537967df6f4bddd226f3"} , "origin" : false , "loc" : [ 25.038958 , -77.466231] , "airport" : "\"NAS\""} , 
+              { "_id" : { "$oid" : "563e537967df6f4bddd226f4"} , "origin" : false , "loc" : [ 12.188853 , -68.959803] , "airport" : "\"CUR\""} , 
+              { "_id" : { "$oid" : "563e537967df6f4bddd226f5"} , "origin" : false , "loc" : [ 21.773625 , -72.265886] , "airport" : "\"PLS\""} , 
+              { "_id" : { "$oid" : "563e537967df6f4bddd226f6"} , "origin" : false , "loc" : [ 18.503717 , -77.913358] , "airport" : "\"MBJ\""} , { "_id" : { "$oid" : "563e537a67df6f4bddd226f7"} , "origin" : false , "loc" : [ 10.593289 , -85.544408] , "airport" : "\"LIR\""} , { "_id" : { "$oid" : "563e537a67df6f4bddd226f8"} , "origin" : false , "loc" : [ 26.683161 , -80.095589] , "airport" : "\"PBI\""} , { "_id" : { "$oid" : "563e537a67df6f4bddd226f9"} , "origin" : false , "loc" : [ 19.267 , -69.742] , "airport" : "\"AZS\""} , { "_id" : { "$oid" : "563e537a67df6f4bddd226fa"} , "origin" : false , "loc" : [ 32.364042 , -64.678703] , "airport" : "\"BDA\""} , { "_id" : { "$oid" : "563e537a67df6f4bddd226fb"} , "origin" : false , "loc" : [ 18.450711 , -68.911833] , "airport" : "\"LRM\""} , { "_id" : { "$oid" : "563e537a67df6f4bddd226fc"} , "origin" : false , "loc" : [ 19.292778 , -81.35775] , "airport" : "\"GCM\""} , { "_id" : { "$oid" : "563e537b67df6f4bddd226fd"} , "origin" : false , "loc" : [ 12.004247 , -61.786192] , "airport" : "\"GND\""}];
+
 function GetMap()
 {
-      var data = [
-      { "latitude": 54.2461, "longitude": -0.7754 },
-      { "latitude": 54.2466, "longitude": -1.0591 },
-      { "latitude": 54.233, "longitude": -1.3413 },
-      { "latitude": 55.0429, "longitude": -1.4449 },
-      { "latitude": 55.0146, "longitude": -1.6663 },
-      { "latitude": 55.1839, "longitude": -1.5697 },
-      { "latitude": 55.1683, "longitude": -1.5459 },
-      { "latitude": 55.1684, "longitude": -1.6880 },
-      { "latitude": 55.1279, "longitude": -1.5077 },
-      { "latitude": 55.086, "longitude": -1.5878 },
-      { "latitude": 55.0506, "longitude": -1.7426 },
-      { "latitude": 55.0099, "longitude": -1.4447 }
-   ];
-   // Create a variable to hold the map itself.
-   map = new Microsoft.Maps.Map(document.getElementById("mapDiv"), {credentials: "AsoF4NMf_8XuII_mgpjlK08E-2rJxG-6-pJbSK7kLmfXTHGtHWDRHv267nDx3jJh", 
-      center: new Microsoft.Maps.Location(data[0].latitude, data[0].longitude), zoom: 14 });
+   Microsoft.Maps.loadModule('Microsoft.Maps.Themes.BingTheme', {callback: function() {
+      map = new Microsoft.Maps.Map(document.getElementById("mapDiv"), {
+         credentials: "AsoF4NMf_8XuII_mgpjlK08E-2rJxG-6-pJbSK7kLmfXTHGtHWDRHv267nDx3jJh",
+         theme: new Microsoft.Maps.Themes.BingTheme(),
+         enableClickableLogo: false,
+         showDashboard: false,
+         animate: false,
+      });
+      var focus = new Microsoft.Maps.Location(crap[crap.length-1].loc[0], crap[crap.length-1].loc[1]);
 
-   pinClusterer = new PinClusterer(map);
-   // Retrieve the location of the map center 
-   var center = map.getCenter();
+      map.setView({
+         mapTypeId: Microsoft.Maps.MapTypeId.road,
+         center: focus,
+         zoom: 80,
+      });
 
-   var locate = [[new Microsoft.Maps.Location(40.639751, -73.778925), "JFK"], [new Microsoft.Maps.Location(26.072583, -80.15275), "FLL"]];
-
-   // createPins(locate);
-   pinClusterer.cluster(data);
+      var pin1 = new Microsoft.Maps.Pushpin(new Microsoft.Maps.Location(34.05, -118.24), null); 
+      map.entities.push(pin1); 
+      map.entities.push(new Microsoft.Maps.Infobox(new Microsoft.Maps.Location(34.05, -118.24), {title: 'Los Angeles', description: 'description here', pushpin: pin1})); 
+      var pin2 = new Microsoft.Maps.Pushpin(new Microsoft.Maps.Location(51.50, -0.127), null); 
+      map.entities.push(pin2); 
+      map.entities.push(new Microsoft.Maps.Infobox(new Microsoft.Maps.Location(51.50, -0.127), {title: 'London', description: 'description here', pushpin: pin2})); 
+      
+      createPins(crap);
+   }});
 }
 
 // locations should be a nested array of the lattitude and longitudinal points for each location that you want a pushpin on.
 // text is whatever you want to display inside of the pushpin infobox.
 function createPins(locations) {
-
-   var targetLocations = new Microsoft.Maps.EntityCollection();
-
-   var infoboxOptions;
-
    for(var i = 0; i < locations.length; i++) {
-      var pushpinOptions = {width: null, height: null, zindex: 1, htmlContent: "<div style='width:20px;height:20px;margin-left:-6px;margin-top:-5px;background-image:none !important;background-color:#29C0F2;border:1px solid #009DD1;border-radius:8px;-moz-border-radius:8px;-webkit-border-radius:8px;-o-border-radius:8px;-webkit-transition:all .1s ease;-moz-transition:all .1s ease;-o-transition:all .1s ease;transition:all .1s ease;-ms-transition:none'>" + locations[i][1] + "</div>"}; 
-      targetLocations.push(new Microsoft.Maps.Pushpin(locations[i][0], pushpinOptions));
+      var pin1 = new Microsoft.Maps.Pushpin(new Microsoft.Maps.Location(locations[i].loc[0], locations[i].loc[1]), null); 
+      map.entities.push(pin1);
+      map.entities.push(new Microsoft.Maps.Infobox(new Microsoft.Maps.Location(locations[i].loc[0], locations[i].loc[1]), {title: locations[i].airport, description: 'mind blown much wow.', pushpin: pin1}));
    }
-
-   map.entities.push(targetLocations);
 }
 
 function getUserLocation() {
-   if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
-    } else {
-        alert("Geolocation is not supported by this browser.");
-    }
-   alert("Hello");
+   var geoLocation = new Microsoft.Maps.GeoLocationProvider(map);
+   geoLocation.getCurrentPosition({showAccuracyCircle: false,
+      successCallback: function(object) {
+         return object.center;
+      }});
+   console.log("failed to obtain user location");
 }
 
 function searchModuleLoaded()
@@ -73,296 +93,3 @@ function errCallback(request)
 {
    alert("An error occurred.");
 }
-
-(function () {
-
-   var _defaults = {
-         debug                   : false,
-         pinTypeName          : 'pin_clusterer pin',
-         clusterTypeName      : 'pin_clusterer cluster',
-         pinSize                 : 16,
-         extendMapBoundsBy : 2,
-         gridSize             : 60,
-         maxZoom                 : 16,
-         clickToZoom          : true,
-         onClusterToMap    : null
-      },
-
-      // Minimum zoom level before bounds dissappear
-      MIN_ZOOM = 2,
-
-      // Alias for Microsoft.Maps
-      mm = null;
-
-   /*
-    *    @param { Microsoft.Maps.Map } map: the map to be show the clusters on
-    *    @param { Object } options: support the following options:
-    *       gridSize       : (number) The grid size of a cluster in pixels.
-    *    maxZoom           : (number) The maximum zoom level that a pin can be part of a cluster.
-    *    onClusterToMap: a function that accepts a parameter pointing at the center of each cluster.
-    *       It gets called before the cluster is added to the map, so you can change all options
-    *       by calling center.setOptions(Microsoft.Maps.PushpinOptions)
-    *       where center is an instance of Microsoft.Maps.Pushpin
-    *
-    *    @properties:
-    *    layer       : (Microsoft.Maps.Layer) the layer holding the clusters
-    *       options     : (Array)   a copy of the options passed
-    *    gridSize : (number)  the actual grid size used
-    *    maxZoom     : (number)  the actual maximum zoom used
-    *
-    */
-
-   var PinClusterer = window.PinClusterer = function (map, options) {
-      this.map        = map;
-      this.options    = options;
-      this.layer      = null;
-
-      this.setOptions(this.options);
-      this.doClickToZoom = _defaults.clickToZoom;
-
-      if (Microsoft && Microsoft.Maps && (map instanceof Microsoft.Maps.Map)) {
-
-         // Create a shortcut
-         mm = Microsoft.Maps;
-
-         this.layer = new mm.EntityCollection();
-         this.map.entities.push(this.layer);
-         this.loaded = true;
-      }
-   };
-
-   PinClusterer.prototype = {
-
-      cluster: function (latlongs) {
-         if (!this.loaded) return;
-         if (!latlongs) {
-            if (!this._latlongs) return;
-         } else {
-            this._latlongs = latlongs;
-         }
-         var self = this;
-         if (this._viewchangeendHandler) {
-            this._redraw();
-         } else {
-            this._viewchangeendHandler = mm.Events.addHandler(this.map, 'viewchangeend', function() { self._redraw(); });
-         }
-      },
-
-      _redraw: function () {
-         if (_defaults.debug) var started = new Date();
-         if (!this._latlongs) return;
-         this._metersPerPixel  = this.map.getMetersPerPixel();
-         this._bounds               = this.getExpandedBounds(this.map.getBounds(), _defaults.extendMapBoundsBy);
-         this._zoom                 = this.map.getZoom();
-         this._clusters             = [];
-         this.doClickToZoom      = true;
-         this.layer.clear();
-         this.each(this._latlongs, this._addToClosestCluster);
-         this.toMap();
-         if (_defaults.debug && started) _log((new Date()) - started);
-      },
-
-      _addToClosestCluster: function (latlong) {
-         var distance         = 40000,
-            location             = new mm.Location(latlong.latitude, latlong.longitude),
-            clusterToAddTo    = null,
-            d;
-         if (this._zoom > MIN_ZOOM && !this._bounds.contains(location)) return;
-
-         if (this._zoom >= _defaults.maxZoom) {
-            this.doClickToZoom = false;
-            this._createCluster(location);
-            return;
-         }
-
-         this.each(this._clusters, function (cluster) {
-            d = this._distanceToPixel(cluster.center.location, location);
-            if (d < distance) {
-               distance = d;
-               clusterToAddTo = cluster;
-            }
-         });
-
-         if (clusterToAddTo && clusterToAddTo.containsWithinBorders(location)) {
-            clusterToAddTo.add(location);
-         } else {
-            this._createCluster(location);
-         }
-      },
-
-      _createCluster: function (location) {
-         var cluster = new Cluster(this);
-         cluster.add(location);
-         this._clusters.push(cluster);
-      },
-
-      setOptions: function (options) {
-         for (var opt in options)
-            if (typeof _defaults[opt] !== 'undefined') _defaults[opt] = options[opt];
-      },
-
-      toMap: function () {
-         this.each(this._clusters, function (cluster) {
-            cluster.toMap();
-         });
-      },
-
-      getExpandedBounds: function (bounds, gridFactor) {
-         var northWest = this.map.tryLocationToPixel(bounds.getNorthwest()),
-            southEast      = this.map.tryLocationToPixel(bounds.getSoutheast()),
-            size           = gridFactor ? _defaults.gridSize * gridFactor : _defaults.gridSize / 2;
-         if (northWest && southEast) {
-            northWest = this.map.tryPixelToLocation(new mm.Point(northWest.x - size, northWest.y - size));
-            southEast = this.map.tryPixelToLocation(new mm.Point(southEast.x + size, southEast.y + size));
-            if (northWest && southEast) {
-               bounds = mm.LocationRect.fromCorners(northWest, southEast);
-            }
-         }
-         return bounds;
-      },
-
-      _distanceToPixel: function (l1, l2) {
-         return PinClusterer.distance(l1, l2) * 1000 / this._metersPerPixel;
-      },
-
-      each: function (items, fn) {
-         if (!items.length) return;
-         for (var i = 0, item; item = items[i]; i++) {
-            var rslt = fn.apply(this, [item, i]);
-            if (rslt === false) break;
-         }
-      }
-
-   };
-
-   PinClusterer.distance = function(p1, p2) {
-     if (!p1 || !p2) return 0;
-     var R     = 6371, // Radius of the Earth in km
-         pi180 = Math.PI / 180;
-      dLat  = (p2.latitude - p1.latitude) * pi180,
-      dLon  = (p2.longitude - p1.longitude) * pi180,
-      a     = Math.sin(dLat / 2) * Math.sin(dLat / 2)
-                      + Math.cos(p1.latitude * pi180) * Math.cos(p2.latitude * pi180) *
-                   Math.sin(dLon / 2) * Math.sin(dLon / 2),
-      c     = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a)),
-      d     = R * c;
-     return d;
-   };
-
-   var Cluster = function (pinClusterer) {
-      this._pinClusterer   = pinClusterer;
-      this.locations          = [];
-      this.center             = null;
-      this._bounds            = null;
-      this.length             = 0;
-      this.doClickToZoom   = this._pinClusterer.doClickToZoom;
-   };
-
-   Cluster.prototype = {
-      add: function (location) {
-        if (this._alreadyAdded(location)) return;
-         this.locations.push(location);
-         this.length += 1;
-         if (!this.center) {
-            this.center = new Pin(location, this);
-            this._calculateBounds();
-         }
-      },
-
-      containsWithinBorders: function (location) {
-         if (this._bounds) return this._bounds.contains(location);
-         return false;
-      },
-
-      zoom: function () {
-         this._pinClusterer.map.setView({ center: this.center.location, zoom: _defaults.maxZoom });
-      },
-
-      _alreadyAdded: function (location) {
-         if (this.locations.indexOf) {
-            return this.locations.indexOf(location) > -1;
-         } else {
-            for (var i = 0, l; l = this.locations[i]; i++) {
-               if (l === location) return true;
-            }
-         }
-         return false;
-      },
-
-      _calculateBounds: function () {
-         var bounds = mm.LocationRect.fromLocations(this.center.location);
-         this._bounds = this._pinClusterer.getExpandedBounds(bounds);
-      },
-
-      toMap: function () {
-         this._updateCenter();
-         this.center.toMap(this._pinClusterer.layer);
-         if (!_defaults.debug) return;
-         var north = this._bounds.getNorth(),
-            east     = this._bounds.getEast(),
-            west     = this._bounds.getWest(),
-            south    = this._bounds.getSouth(),
-            nw          = new mm.Location(north, west),
-            se          = new mm.Location(south, east),
-            ne          = new mm.Location(north, east)
-            sw          = new mm.Location(south, west),
-            color    = new mm.Color(100, 100, 0, 100),
-            poly     = new mm.Polygon([nw, ne, se, sw], { fillColor: color, strokeColor: color, strokeThickness: 1 });
-         this._pinClusterer.layer.push(poly);
-      },
-
-      _updateCenter: function () {
-         var count   = this.locations.length,
-            text        = '',
-            typeName    = _defaults.pinTypeName;
-         if (count > 1) {
-            text += count;
-            typeName = _defaults.clusterTypeName;
-         }
-         this.center.pushpin.setOptions({
-            text        : text,
-            typeName : typeName
-         });
-         if (_defaults.onClusterToMap) {
-            _defaults.onClusterToMap.apply(this._pinClusterer, [this.center.pushpin, this]);
-         }
-      }
-   };
-
-   var Pin = function (location, cluster, options) {
-      this.location = location;
-      this._cluster = cluster;
-
-      // The default options of the pushpin showing at the centre of the cluster
-      // Override within onClusterToMap function
-
-      this._options                 = options || {};
-      this._options.typeName     = this._options.typeName || _defaults.pinTypeName;
-      this._options.height          = _defaults.pinSize;
-      this._options.width        = _defaults.pinSize;
-      this._options.anchor          = new mm.Point(_defaults.pinSize / 2, _defaults.pinSize / 2);
-      this._options.textOffset   = new mm.Point(0, 2);
-      this._create();
-   };
-
-   Pin.prototype = {
-      _create: function () {
-         this.pushpin  = new mm.Pushpin(this.location, this._options);
-         if (this._cluster.doClickToZoom) {
-            var self = this;
-            mm.Events.addHandler(this.pushpin, 'mouseup', function () { self._cluster.zoom(); });
-         }
-      },
-
-      toMap: function (layer) {
-         layer.push(this.pushpin);
-      }
-   };
-
-
-   var _log = function (msg) {
-      if (console && console.log) console.log(msg);
-   };
-
-})();
-
