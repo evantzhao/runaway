@@ -15,6 +15,11 @@
 
          map = new Microsoft.Maps.Map(document.getElementById("mapDiv"), {credentials: "AsoF4NMf_8XuII_mgpjlK08E-2rJxG-6-pJbSK7kLmfXTHGtHWDRHv267nDx3jJh", center: new Microsoft.Maps.Location(47.5, -122.3), zoom: 9 });
 
+         var center = map.getCenter();
+         console.log(center);
+         var pin = new Microsoft.Maps.Pushpin(center, {text: 'smokeweekeveryday'}); 
+         map.entities.push(pin);
+
          Microsoft.Maps.loadModule('Microsoft.Maps.Search', { callback: searchModuleLoaded });
 
       }
