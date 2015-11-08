@@ -1,5 +1,13 @@
 <?php
 require_once("./includes/db_connect.php");
+
+$airportLocations=[];
+$cursor = $airports->find();
+foreach($cursor as $key=>$value)
+{
+	$airportLocations[$value['airport']]=$value['loc'];
+}
+
 if(isset($_GET['lon']))
 {
 	$lon = floatval($_GET['lon']);
@@ -15,7 +23,6 @@ else
 {
 	$airportCode=$_GET['airport'];
 }
-
 if($airportCode=='JFK')
 {
 	echo file_get_contents('./includes/jfk.json');
@@ -32,6 +39,13 @@ else
 			$destinations[$value['Destination']]=$value;
 		else if(floatval($destinations[$value['Destination']]['JetBlue Package Price/Person'])>floatval($value['JetBlue Package Price/Person']))
 			$destinations[$value['Destination']]=$value;
+	}
+	foreach($destinations as $key=>$value)
+	{
+		if($key!='Origin')
+		{
+			$destinations[$key]["coordinates"]=$airportLocations[$value['Destination']];
+		}
 	}
 	echo json_encode($destinations);
 }
