@@ -53,13 +53,18 @@ function GetMap()
 // locations should be a nested array of the lattitude and longitudinal points for each location that you want a pushpin on.
 // text is whatever you want to display inside of the pushpin infobox.
 function createPins(locations) {
+  console.log(locations);
    for(var i = 0; i < locations.length; i++) {
       var pin1 = new Microsoft.Maps.Pushpin(new Microsoft.Maps.Location(locations[i].loc[1], locations[i].loc[0]), null);
       map.entities.push(pin1);
-      var info1 = new Microsoft.Maps.Infobox(new Microsoft.Maps.Location(locations[i].loc[1], locations[i].loc[0]), {title: locations[i].airport, description: 'mind blown much wow.', pushpin: pin1})
+      var info1 = new Microsoft.Maps.Infobox(new Microsoft.Maps.Location(locations[i].loc[1], locations[i].loc[0]), {titleClickHandler: InfoboxHandler, title: locations[i].airport, description: 'mind blown much wow.', pushpin: pin1})
       map.entities.push(info1);
-      info1.setOptions({state:Microsoft.Maps.EntityState.selected});
    }
+}
+
+function InfoboxHandler() {
+  console.log($('#flyingFrom').val());
+  window.location.href = "results.html";
 }
 
 function searchModuleLoaded()
