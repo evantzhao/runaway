@@ -48,11 +48,19 @@
    		<form>
    			<div class="form-group">
    				<label for="looseCash">Avaliable funds</label>
-   				<input type="funds" class="form-control" id="avaliableFunds" placeholder="$$$">
+   				<input type="funds" class="form-control" id="avaliableFunds" placeholder="$">
    			</div>
    			<div class="form-group">
    				<label for="airport">Traveling From</label>
-   				<input type="airport" class="form-control" id="flyingFrom" placeholder="Flying from?">
+   				<select type="airport" class="form-control" id="flyingFrom" placeholder="Flying from?">
+            <option value="BOS">BOS</option>
+            <option value="FLL">FLL</option>
+            <option value="JFK">JFK</option>
+            <option value="LGB">LGB</option>
+            <option value="MCO">MCO</option>
+            <option value="SFO">SFO</option>
+            <option value="SJU">SJU</option>
+          </select>
    			</div>
    			<button type="submit" class = "btn btn-default">Search!</button>
    		</form>
