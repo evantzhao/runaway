@@ -56,12 +56,6 @@
           <a class="navbar-brand" href="./"><img alt="Brand" src="useful things/whitePlane.png" height="20" width="20"></a>
           <a class="navbar-brand" href="./">Runaway</a>
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
-         <ul class="nav navbar-nav navbar-right">
-           <li class><a href="#"> About </a></li>
-           <li><a href="#">Link</a></li>
-         </ul>
-        </div>
       </div>
     </nav>
     <div class="container-fluid">
