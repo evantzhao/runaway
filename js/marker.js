@@ -37,12 +37,12 @@ function GetMap()
          showDashboard: false,
          animate: false,
       });
-      var focus = new Microsoft.Maps.Location(crap[crap.length-1].loc[0], crap[crap.length-1].loc[1]);
+      var focus = new Microsoft.Maps.Location(25.5, -95.185);
 
       map.setView({
          mapTypeId: Microsoft.Maps.MapTypeId.road,
          center: focus,
-         zoom: 10,
+         zoom: 8,
       });
    }});
 
@@ -59,6 +59,7 @@ function createPins(locations) {
       map.entities.push(new Microsoft.Maps.Infobox(new Microsoft.Maps.Location(locations[i].loc[1], locations[i].loc[0]), 
         {titleClickHandler: function(){InfoboxHandler(thisAirport);}, title: locations[i].airport, description: 'starting from $'+locations[i].price.toFixed(2), pushpin: pin1}));
    }
+
 }
 function InfoboxHandler(destination) {
   var origin=$('#flyingFrom').val();
