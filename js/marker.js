@@ -44,23 +44,21 @@ function GetMap()
          center: focus,
          zoom: 10,
       });
-   }});
 
-   getUserLocation();
+      // createPins(crap);
+      getUserLocation();
+   }});
 }
 
 // locations should be a nested array of the lattitude and longitudinal points for each location that you want a pushpin on.
 // text is whatever you want to display inside of the pushpin infobox.
 function createPins(locations) {
-<<<<<<< HEAD
-  console.log(locations);
-   for(var i = 1; i < locations.length; i++) {
-=======
    for(var i = 0; i < locations.length; i++) {
->>>>>>> 60aba8c95683324390b611a38ed7775934d4401e
       var pin1 = new Microsoft.Maps.Pushpin(new Microsoft.Maps.Location(locations[i].loc[1], locations[i].loc[0]), null);
       map.entities.push(pin1);
-      map.entities.push(new Microsoft.Maps.Infobox(new Microsoft.Maps.Location(locations[i].loc[1], locations[i].loc[0]), {title: locations[i].airport, description: 'mind blown much wow.', pushpin: pin1}));
+      var info1 = new Microsoft.Maps.Infobox(new Microsoft.Maps.Location(locations[i].loc[1], locations[i].loc[0]), {title: locations[i].airport, description: 'mind blown much wow.', pushpin: pin1})
+      map.entities.push(info1);
+      info1.setOptions({state:Microsoft.Maps.EntityState.selected});
    }
 }
 
@@ -76,7 +74,6 @@ function reverseGeocodeCallback(result, userData)
 {
    alert("The first result is " + result.name + ".");
 }
-
 
 function errCallback(request)
 {
