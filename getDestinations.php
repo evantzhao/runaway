@@ -23,13 +23,17 @@ else
 {
 	$airportCode=$_GET['airport'];
 }
-if($airportCode=='JFK')
+if($airportCode=='JFK'&&!isset($_GET['price']))
 {
 	echo file_get_contents('./includes/jfk.json');
 }
 else
 {
 	$query = array('Origin'=>$airportCode);
+	if(isset($_GET['price']))
+	{
+		$query['JetBlue Package Price/Person']=array('$lt'=>floatval($_GET['price']));
+	}
 	$cursor = $packages->find($query,array('Destination'=>1,'JetBlue Package Price/Person'=>1,'_id'=>0));
 	$destinations=[];
 	$destinations['Origin']=$airportCode;
@@ -51,7 +55,9 @@ else
 	}
 	$destinationsList=[];
 	foreach($destinations as $key=>$value)
+	{
 		array_push($destinationsList, $value);
+	}
 	echo json_encode($destinationsList);
 }
 ?>

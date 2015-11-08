@@ -5,7 +5,7 @@ $mongo = new MongoClient("mongodb://username:password@ds052408.mongolab.com:5240
 if ($mongo) {	// If happy...
    $db = $mongo -> runaway;
    $airports = $db-> airports;
-   $packages = $db-> packages;
+   $packages = $db-> packages2;
 } else {
    echo json_encode(['status' => 'mongo connection error']);
    exit; 
