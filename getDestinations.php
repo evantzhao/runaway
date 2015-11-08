@@ -44,7 +44,9 @@ else
 	{
 		if($key!='Origin')
 		{
-			$destinations[$key]["coordinates"]=$airportLocations[$value['Destination']];
+			$destinations[$key]["loc"]=$airportLocations[$value['Destination']];
+			$destinations[$key]['airport']=$destinations[$key]['Destination'];
+			unset($destinations[$key]['Destination']);
 		}
 	}
 	echo json_encode($destinations);
