@@ -51,6 +51,8 @@ else
 			$destinations[$key]["loc"]=$airportLocations[$value['Destination']];
 			$destinations[$key]['airport']=$destinations[$key]['Destination'];
 			unset($destinations[$key]['Destination']);
+			$destinations[$key]['price']=$destinations[$key]['JetBlue Package Price/Person'];
+			unset($destinations[$key]['JetBlue Package Price/Person']);
 		}
 	}
 	$destinationsList=[];
