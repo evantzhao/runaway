@@ -85,6 +85,7 @@ xmlhttp.onreadystatechange=function() {
   if (xmlhttp.readyState==4 && xmlhttp.status==200) {
     var response=JSON.parse(xmlhttp.responseText);
     $("#flyingFrom").val(response.shift());
+    deletePins();
     createPins(response);
   }
 }
@@ -94,4 +95,24 @@ function getUserLocation() {
     xmlhttp.open("GET","./getDestinations.php?lon="+position.coords.longitude+"&lat="+position.coords.latitude);
     xmlhttp.send();
   });
+}
+
+function deletePins() 
+{
+    for(var i=map.entities.getLength()-1;i>=0;i--) 
+    {
+        var pushpin= map.entities.get(i); 
+        if (pushpin instanceof Microsoft.Maps.Pushpin) { 
+          map.entities.removeAt(i);  
+        } ;
+     } 
+}
+
+function newSearch()
+{
+  var suffix="";
+  if($("#availableFunds").val().length>0)
+    suffix="&price="+$("#availableFunds").val();
+  xmlhttp.open("GET","./getDestinations.php?airport="+$("#flyingFrom").val()+suffix);
+  xmlhttp.send();
 }
