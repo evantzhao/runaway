@@ -42,7 +42,7 @@ function GetMap()
       map.setView({
          mapTypeId: Microsoft.Maps.MapTypeId.road,
          center: focus,
-         zoom: 5,
+         zoom: 10,
       });
    }});
 
@@ -52,11 +52,10 @@ function GetMap()
 // locations should be a nested array of the lattitude and longitudinal points for each location that you want a pushpin on.
 // text is whatever you want to display inside of the pushpin infobox.
 function createPins(locations) {
-  console.log(locations);
-   for(var i = 0; i < locations.length; i++) {
-      var pin1 = new Microsoft.Maps.Pushpin(new Microsoft.Maps.Location(locations[i].loc[0], locations[i].loc[1]), null); 
+   for(var i = 1; i < locations.length; i++) {
+      var pin1 = new Microsoft.Maps.Pushpin(new Microsoft.Maps.Location(locations[i].loc[1], locations[i].loc[0]), null);
       map.entities.push(pin1);
-      map.entities.push(new Microsoft.Maps.Infobox(new Microsoft.Maps.Location(locations[i].loc[0], locations[i].loc[1]), {title: locations[i].airport, description: 'mind blown much wow.', pushpin: pin1}));
+      map.entities.push(new Microsoft.Maps.Infobox(new Microsoft.Maps.Location(locations[i].loc[1], locations[i].loc[0]), {title: locations[i].airport, description: 'mind blown much wow.', pushpin: pin1}));
    }
 }
 
@@ -73,6 +72,7 @@ function reverseGeocodeCallback(result, userData)
    alert("The first result is " + result.name + ".");
 }
 
+
 function errCallback(request)
 {
    alert("An error occurred.");
@@ -85,15 +85,9 @@ xmlhttp.onreadystatechange=function() {
   }
 }
 
-function showPosition(position) {
-    xmlhttp.open("GET","./getDestinations.php?lon="+position.coords.longitude+"&lat"+position.coords.latitude);
-    xmlhttp.send();
-}
-
 function getUserLocation() {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
-    } else {
-        alert("Geolocation is not supported by this browser.");
-    }
+  navigator.geolocation.getCurrentPosition(function(position) {
+    xmlhttp.open("GET","./getDestinations.php?lon="+position.coords.longitude+"&lat="+position.coords.latitude);
+    xmlhttp.send();
+  });
 }
