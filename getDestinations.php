@@ -49,6 +49,9 @@ else
 			unset($destinations[$key]['Destination']);
 		}
 	}
-	echo json_encode($destinations);
+	$destinationsList=[];
+	foreach($destinations as $key=>$value)
+		array_push($destinationsList, $value);
+	echo json_encode($destinationsList);
 }
 ?>
