@@ -44,9 +44,9 @@ function GetMap()
          center: focus,
          zoom: 10,
       });
-
-      createPins(crap);
    }});
+
+   getUserLocation();
 }
 
 // locations should be a nested array of the lattitude and longitudinal points for each location that you want a pushpin on.
@@ -58,15 +58,6 @@ function createPins(locations) {
       map.entities.push(pin1);
       map.entities.push(new Microsoft.Maps.Infobox(new Microsoft.Maps.Location(locations[i].loc[0], locations[i].loc[1]), {title: locations[i].airport, description: 'mind blown much wow.', pushpin: pin1}));
    }
-}
-
-function getUserLocation() {
-   var geoLocation = new Microsoft.Maps.GeoLocationProvider(map);
-   geoLocation.getCurrentPosition({showAccuracyCircle: false,
-      successCallback: function(object) {
-         return object.center;
-      }});
-   console.log("failed to obtain user location");
 }
 
 function searchModuleLoaded()
@@ -86,4 +77,22 @@ function reverseGeocodeCallback(result, userData)
 function errCallback(request)
 {
    alert("An error occurred.");
+}
+
+var xmlhttp=new XMLHttpRequest();
+xmlhttp.onreadystatechange=function() {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+    createPins(JSON.parse(xmlhttp.responseText));
+    alert(xmlhttp.responseText);
+  }
+}
+
+function getUserLocation() {
+   var geoLocation = new Microsoft.Maps.GeoLocationProvider(map);
+   geoLocation.getCurrentPosition({showAccuracyCircle: false,
+      successCallback: function(object) {
+      var coords=object.center;
+      xmlhttp.open("GET","./getDestinations.php?lon="+coords.longitude+"&lat"+coords.latitude);
+      xmlhttp.send();
+      }});
 }
