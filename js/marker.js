@@ -42,7 +42,7 @@ function GetMap()
       map.setView({
          mapTypeId: Microsoft.Maps.MapTypeId.road,
          center: focus,
-         zoom: 10,
+         zoom: 5,
       });
    }});
 
@@ -73,7 +73,6 @@ function reverseGeocodeCallback(result, userData)
    alert("The first result is " + result.name + ".");
 }
 
-
 function errCallback(request)
 {
    alert("An error occurred.");
@@ -83,16 +82,18 @@ var xmlhttp=new XMLHttpRequest();
 xmlhttp.onreadystatechange=function() {
   if (xmlhttp.readyState==4 && xmlhttp.status==200) {
     createPins(JSON.parse(xmlhttp.responseText));
-    alert(xmlhttp.responseText);
   }
 }
 
+function showPosition(position) {
+    xmlhttp.open("GET","./getDestinations.php?lon="+position.coords.longitude+"&lat"+position.coords.latitude);
+    xmlhttp.send();
+}
+
 function getUserLocation() {
-   var geoLocation = new Microsoft.Maps.GeoLocationProvider(map);
-   geoLocation.getCurrentPosition({showAccuracyCircle: false,
-      successCallback: function(object) {
-      var coords=object.center;
-      xmlhttp.open("GET","./getDestinations.php?lon="+coords.longitude+"&lat"+coords.latitude);
-      xmlhttp.send();
-      }});
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        alert("Geolocation is not supported by this browser.");
+    }
 }
