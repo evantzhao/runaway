@@ -24,8 +24,7 @@
       function searchPackages(){
         var maxPrice=$("#amount").val().replace("$","");
 
-        xmlhttp.open("GET","./getPackages.php?origin="+<?php echo "'".$_GET['origin']."'";?>+"&destination="+<?php echo "'".$_GET['destination']."'";?>+"&price="+maxPrice);
-        alert("./getPackages.php?origin="+<?php echo "'".$_GET['origin']."'";?>+"&destination="+<?php echo "'".$_GET['destination']."'";?>+"&price="+maxPrice);
+          xmlhttp.open("GET","./getPackages.php?origin="+<?php echo "'".$_GET['origin']."'";?>+"&destination="+<?php echo "'".$_GET['destination']."'";?>+"&price="+maxPrice);
         xmlhttp.send();
       }
       </script>
@@ -54,8 +53,8 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#"><img alt="Brand" src="useful things/whitePlane.png" height="20" width="20"></a>
-          <a class="navbar-brand" href="#">Runaway</a>
+          <a class="navbar-brand" href="./"><img alt="Brand" src="useful things/whitePlane.png" height="20" width="20"></a>
+          <a class="navbar-brand" href="./">Runaway</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
          <ul class="nav navbar-nav navbar-right">
