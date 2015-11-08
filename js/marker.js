@@ -42,16 +42,9 @@ function GetMap()
       map.setView({
          mapTypeId: Microsoft.Maps.MapTypeId.road,
          center: focus,
-         zoom: 80,
+         zoom: 10,
       });
 
-      var pin1 = new Microsoft.Maps.Pushpin(new Microsoft.Maps.Location(34.05, -118.24), null); 
-      map.entities.push(pin1); 
-      map.entities.push(new Microsoft.Maps.Infobox(new Microsoft.Maps.Location(34.05, -118.24), {title: 'Los Angeles', description: 'description here', pushpin: pin1})); 
-      var pin2 = new Microsoft.Maps.Pushpin(new Microsoft.Maps.Location(51.50, -0.127), null); 
-      map.entities.push(pin2); 
-      map.entities.push(new Microsoft.Maps.Infobox(new Microsoft.Maps.Location(51.50, -0.127), {title: 'London', description: 'description here', pushpin: pin2})); 
-      
       createPins(crap);
    }});
 }
