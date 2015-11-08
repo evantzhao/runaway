@@ -37,12 +37,12 @@ function GetMap()
          showDashboard: false,
          animate: false,
       });
-      var focus = new Microsoft.Maps.Location(25.5, -95.185);
+      var focus = new Microsoft.Maps.Location(28, -81.185);
 
       map.setView({
          mapTypeId: Microsoft.Maps.MapTypeId.road,
          center: focus,
-         zoom: 8,
+         zoom: 4,
       });
    }});
 
