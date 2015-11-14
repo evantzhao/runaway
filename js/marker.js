@@ -55,13 +55,13 @@ function createPins(locations) {
    for(var i = 0; i < locations.length; i++) {
       var pin1 = new Microsoft.Maps.Pushpin(new Microsoft.Maps.Location(locations[i].loc[1], locations[i].loc[0]), null);
       map.entities.push(pin1);
-      var thisAirport=locations[i].airport
       map.entities.push(new Microsoft.Maps.Infobox(new Microsoft.Maps.Location(locations[i].loc[1], locations[i].loc[0]), 
-        {titleClickHandler: function(){InfoboxHandler(thisAirport);}, title: locations[i].airport, description: 'starting from $'+locations[i].price.toFixed(2), pushpin: pin1}));
+        {titleClickHandler: InfoboxHandler, title: locations[i].airport, description: 'starting from $'+locations[i].price.toFixed(2), pushpin: pin1}));
    }
 
 }
-function InfoboxHandler(destination) {
+function InfoboxHandler(sender) {
+  var destination=sender.srcElement.firstChild.data;
   var origin=$('#flyingFrom').val();
   window.location.href = "./results.php?origin="+origin+"&destination="+destination;
 }

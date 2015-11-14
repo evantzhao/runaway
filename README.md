@@ -1,3 +1,3 @@
 # runaway
 
-An app designed for running away from your troubles bahahah who are we kidding.
+PHP/JS/jQuery/MongoDB app designed for finding low price last minute JetBlue deals
