@@ -1,8 +1,10 @@
 <?php
-require_once("./includes/db_connect.php");
+//require_once('./includes/db_connect.php');
+require_once('./includes/db_connect_web.php');
 
 $airportLocations=[];
-$cursor = $airports->find();
+//$cursor=$airports->find();
+$cursor = airports();
 foreach($cursor as $key=>$value)
 {
 	$airportLocations[$value['airport']]=$value['loc'];
@@ -16,7 +18,8 @@ if(isset($_GET['lon']))
 		'origin'=>true,
 		'loc'=>array(
 			'$near'=>array($lon,$lat)));
-	$doc = $airports->findOne($query);
+	//$doc=$airports->findOne($query);
+	$doc = nearestAirport($query);
 	$airportCode=$doc['airport'];
 }
 else
@@ -34,7 +37,10 @@ else
 	{
 		$query['JetBlue Package Price/Person']=array('$lt'=>floatval($_GET['price']));
 	}
-	$cursor = $packages->find($query,array('Destination'=>1,'JetBlue Package Price/Person'=>1,'_id'=>0));
+	//$cursor = $packages->find($query,array('Destination'=>1,'JetBlue Package Price/Person'=>1,'_id'=>0));
+	//$fields=array('Destination'=>1,'JetBlue Package Price/Person'=>1,'_id'=>0);
+	$fields=array('Destination'=>1,'JetBlue Package Price/Person'=>1,'_id'=>0);
+	$cursor = packages($query,$fields);
 	$destinations=[];
 	$destinations['Origin']=$airportCode;
 	foreach($cursor as $key=>$value)
