@@ -2,7 +2,7 @@
 function packages($query,$fields){
 	$connection='https://api.mongolab.com/api/1/databases/runaway/collections/';
 	$key='?apiKey=sCMaz0w9WNpWNg7zJm6rUc7pSmqq3phq';
-	$queryString=json_encode($query);
+	$queryString=urlencode(json_encode($query));
 	$fieldString=urlencode(json_encode($fields));
 	$result=curl($connection.'packages2'.$key.'&q='.$queryString.'&f='.$fieldString);
 	return json_decode($result,true);
