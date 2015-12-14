@@ -4,4 +4,6 @@ PHP/JS/jQuery/MongoDB app designed for finding low price last minute JetBlue dea
 
 Hosted at wzwright.com/runaway
 
-This uses static data because a functioning API was unavailable, so all of the travel packages are now out of date.
+It can take around 10 seconds to load, be patient
+
+Uses static data because a functioning API was unavailable, so all of the travel packages are now out of date.
